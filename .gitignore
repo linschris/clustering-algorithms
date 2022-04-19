@@ -1,0 +1,4 @@
+__pycache__
+*.csv
+*.jpeg
+update_requirements.txt
