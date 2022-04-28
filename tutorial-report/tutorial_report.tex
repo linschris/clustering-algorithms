@@ -16,7 +16,23 @@
 \usepackage{xpatch} % used to patch \textcite
 \usepackage{algorithm,algpseudocode}
 
+
+
 \bibliography{refs.bib}
+
+% All from https://tex.stackexchange.com/questions/69728/indenting-lines-of-code-in-algorithm, allows for code indents
+\newlength\myindent
+\setlength\myindent{2em}
+
+\newcommand\bindent{%
+  \begingroup
+  \setlength{\itemindent}{\myindent}
+  \addtolength{\algorithmicindent}{\myindent}
+}
+\newcommand\eindent{\endgroup}
+% Ends here
+
+
 \DeclareNameAlias{default}{last-first}
 
 \xpatchbibmacro{textcite}
@@ -61,7 +77,7 @@ The following report dives into an approach to clustering images together: based
 
 \subsection {Algorithms}
 
-\indent A very well-known, partition-type clustering algorithm is K-Means. Partition-based clustering refers to a harder (meaning more strict) form of partitioning where every datapoint can only be in one cluster. The main goal of this algorithm is to create partitions of data points, by creating points of relevance called clusters, which minimize the distance from any given data point to any given cluster. The distance metric utilized by K-Means is Euclidean distance where the distance from a datapoint i to a cluster j with given dimensions (x, y, z) d:
+\indent A very well-known, partition-type clustering algorithm is K-Means. Partition-based clustering refers to a harder (meaning more strict) form of partitioning where every datapoint can only be in one cluster. The main goal of this algorithm is to create partitions of data points, by creating points of relevance called clusters, which minimize the distance from any given data point to any given cluster. The distance metric utilized by K-Means is Euclidean distance where the distance from a data point \(x_i\) to a cluster \(x_j \) with d dimensions:
 \(D_{i, j} = \sum_{l=1}^d \sqrt{|x_{il}^2 - x_{jl}^2|} \). In my own implementation (for learning, understanding, and documentation), I utilized Euclidean distance for only 2 dimensions via: \(D_{i, j} = \sqrt{{|x_{j} - x_{i}|^2} + {|y_{j} - y_{i}|^2}} \). \\ In combination with my own implementation, I utilized Lloyd’s algorithm to compute and converge on centers of clusters, which is the same as for the library utilized in the tutorial, sklearn.
 
 \subsubsection {Pseudocode}
@@ -69,16 +85,16 @@ The following report dives into an approach to clustering images together: based
 \begin{algorithm}
   \caption{ K-Means: Lloyd's Algorithm }
   \begin{algorithmic}[1] \\
-     Initialize k clusters to be at initial positions of (0, ..., 0).\\
-     Select k number of initial centers (centroids) from datapoints (at random)
-     \While {Centroid positions don't change}
+    Initialize k clusters to be at initial positions of (0, ..., 0).\\
+    Select k number of initial centers (centroids) from datapoints (at random)
+    \While {Centroid positions don't change}
      \For {n datapoints}
       \For {k clusters} \\
         Calculate distance from data point n to cluster k \\
       \EndFor \\
-        \indent Store closest cluster for each data point n
+        Store closest cluster for each data point n
      \EndFor \\
-    New centroid position = mean of all subsequent data point positions
+        New centroid position = mean of all subsequent data point positions
     \EndWhile
   \end{algorithmic}
 
@@ -90,15 +106,40 @@ The following report dives into an approach to clustering images together: based
 
 
 
-\indent The soft (fuzzy) counterpart to the K-Means algorithm is the Fuzzy C-Means (FCM) algorithm. The FCM algorithm is “softer” or “fuzzier” as unlike K-Means, it allows for a datapoint to coexist in several different clusters with different values of membership (i.e. how much it relates to that given cluster).
+\indent The soft (fuzzy) counterpart to the K-Means algorithm is the Fuzzy C-Means (FCM) algorithm. The FCM algorithm is “softer” or “fuzzier” as unlike K-Means, it allows for a datapoint to coexist in several different clusters with different values of membership (i.e. how much it relates to that given cluster). In comparison to the K-Means, the FCM algorithm is more popular for image segmentation because it’s more computational efficient (O(n) versus O(knt) (Source)), applicable to multichannel data (i.e. colored images), and has the ability to model uncertainty in the data (Source). In the context of the high number of pixels being grouped upon, as well as the channels of color which apply to colored images, it’s clear that an algorithm like Fuzzy C Means is a very good option for image segmentation.
+\\
+\indent Fuzzy C-Means, in a very similar fashion to K-Means, will utilize a Euclidean distance metric. However, the data points now have an additional set of k membership values, k being the number of clusters. FCM utilizes membership values of the data points, where every datapoint has a set of k membership values adding up to 1, with k being the number of clusters. These membership values will be randomly initialized for each datapoint, and tweaked depending on the distance metric from a datapoint to a cluster. The centers of the cluster will now be tweaked based on the mean of the data points as well as their membership values. In other words, the centroid’s datapoint will be most affected by data points which have a membership high for that cluster. Mathematically, this is all represented by first calculating the centroid positions by computing \[ \frac{ \sum_{i}^{n} (m_{ij})^f * dp_i  }{  \sum_{i}^{n} (m_{ij})^f  }\] with \(n\) datapoints \(dp\), a cluster \(j\) and a given membership value of a datapoint \(i\) for a cluster \(j\) \(m_{ij}\). The new f value represents the fuzzifier, or what will convert a hard output into a soft output (i.e. less hard clustering); a value of 1 equates to K-Means, whereas infinity equates to all values being equally in the same cluster. After computing the new centroid values, the data point’s membership values will be equal to the euclidean distance from a datapoint i to cluster j, divided by the total euclidean distance to all clusters from the same datapoint. This is calculated as follows: \[m_{ij} = \frac{1}{\sum_{i=1}{k} (\frac{|dp_i - c_j|}{|dp_i - c_k|})^{\frac{1}{f-1}}} \]. In psuedocode, we'd have something like:
+
+\subsubsection {Pseudocode}
+
+\begin{algorithm}
+  \caption{ Fuzzy C-Means }
+  \begin{algorithmic}[1] \\
+    \State $f \gets 2$
+    Initialize k clusters to be at initial positions of (0, ..., 0).\\
+    Select k number of initial centers (centroids) from datapoints (at random)
+    \While {Centroid positions don't change}
+     \For {n datapoints}
+      \For {k clusters} \\
+        Calculate distance from data point n to cluster k \\
+      \EndFor \\
+        Store closest cluster for each data point n
+     \EndFor \\
+        New centroid position = mean of all subsequent data point positions
+    \EndWhile
+  \end{algorithmic}
 
 
 
-In comparison to the K-Means, the FCM algorithm is more popular for image segmentation because …
+
+\end{algorithm}
+
 
 
 
 \section {Evaluation}
+
+Evaluation of these clustering algorithms were performed using “simple” images, or images with objects of few, distinct colors, versus more complex images where the colors of objects often overlapped. The first proposed method for comparing K-Means and Fuzzy C-Means is utilizing a confusion matrix and computing accuracy, precision, and recall to compare on select images. A secondary method of utilizing Intersection of Union (IoU), which is simply the “ratio of the number of common pixels between X and Y to the total number of pixels in X and Y” (Mittal), mathematically calculated by \[ \frac{|X \cap Y|}{|X| + |Y|} \] To test and obtain these values, we utilized the BLANK dataset as a ground truth to compare the algorithms with each other and the ground truth, the “ground truth” being human-segmented images.
 
 \section {Discussion}
 

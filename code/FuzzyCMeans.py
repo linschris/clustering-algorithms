@@ -40,7 +40,6 @@ def FuzzyCMeans(data, k):
     addZeros = np.zeros((num_datapoints, 1))
     img_data = data
     data = np.append(data, addZeros, axis=1)
-    print(data)
     for i in range(num_datapoints):
         cluster_num = np.where(mem_values[i] == np.amax(mem_values[i]))
         data[i, num_dimensions-1] = cluster_num[0]
