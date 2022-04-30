@@ -68,30 +68,30 @@ def FuzzyCMeans(data, k=2, f=2):
 
 
 
-# k = 4
-# data = np.random.randint(100, size=(100,4)) # size=(m, n) => m samples of n size are pulled 
-# # data = np.array([
-# #         [1,1,2,1], 
-# #         [2,1,2,3], 
-# #         [2,2,4,5], 
-# #         [50,42,2,83],
-# #         [51,43,1,82],
-# #         [51,44,3,89],
-# #         [53,40,8,80]])
-# # data = np.array([[1, 2], [3, 4]])
-# # new_data = FuzzyCMeans(data, k)
-# img = cv2.imread("corgi-tree.jpeg", cv2.IMREAD_UNCHANGED)
-# reshaped_img = img.reshape((-1,3))
-# centers, new_data, img_data = FuzzyCMeans(reshaped_img, k)
-# centers = np.uint8(centers)
-# print(centers)
-# # print(centers.flatten())
-# print(np.uint(new_data[:, 3]).flatten())
-# segmented_image = centers[np.uint8(new_data[:, 3]).flatten()]
-# print(segmented_image)
-# segmented_image = segmented_image.reshape((img.shape))
-# COLOR_TABLE = {0:'r', 1:'b', 2:'p'}
-# plt.imshow(segmented_image)
-# plt.pause(100)
+k = 4
+data = np.random.randint(100, size=(100,4)) # size=(m, n) => m samples of n size are pulled 
+# data = np.array([
+#         [1,1,2,1], 
+#         [2,1,2,3], 
+#         [2,2,4,5], 
+#         [50,42,2,83],
+#         [51,43,1,82],
+#         [51,44,3,89],
+#         [53,40,8,80]])
+# data = np.array([[1, 2], [3, 4]])
+# new_data = FuzzyCMeans(data, k)
+img = cv2.imread("images/corgi-tree.jpeg", cv2.IMREAD_UNCHANGED)
+reshaped_img = img.reshape((-1,3))
+centers, new_data, img_data = FuzzyCMeans(reshaped_img, k)
+centers = np.uint8(centers)
+print(centers)
+# print(centers.flatten())
+print(np.uint(new_data[:, 3]).flatten())
+segmented_image = centers[np.uint8(new_data[:, 3]).flatten()]
+print(segmented_image)
+segmented_image = segmented_image.reshape((img.shape))
+COLOR_TABLE = {0:'r', 1:'b', 2:'p'}
+plt.imshow(segmented_image)
+plt.pause(100)
 
 
