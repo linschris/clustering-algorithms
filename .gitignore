@@ -4,3 +4,4 @@ __pycache__
 update_requirements.txt
 BSDS300
 old
+scifuzzy
