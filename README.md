@@ -1,5 +1,7 @@
 # Fuzzy C Means And K Means Algorithm
-## An implementation of the Fuzzy C Means and K Means clustering algorithms, as well as the corresponding algorithms from `scikit_learn` and `skfuzzy`, used for developing centers for collections of data points. 
+## An implementation of the Fuzzy C Means and K Means clustering algorithms, as well as the corresponding K Means from `scikit_learn`, used for developing centers for collections of data points. 
+
+## NOTE: Due to complications with using the module skfuzzy, I only included examples utilizing and evaluating `KMeans`; Fuzzy C Means's implementation can be still explored, and KMeans is a very close relative regardless.
 
 ## The examples use blobs of data points, individual image pixels, and groups of images, as a means to demonstrate, teach, and evaluate these algorithms.
 
@@ -109,6 +111,14 @@ As an example, here's what the elbow method determines for the number of cluster
 <img src="readme_images/corgi-white-elbow.png" width=400>
 
 #### We can deduce this to mean roughly 3 clusters is best, as it forms the "elbow" (also called the knee sometimes) of this graph.
+
+__Classification Report__
+- Given the ground truth and predictions, the classification report can give information about the accuracy, precision, f1-score, and support
+of the clustering algorithm by computing various formulas given the True Positive, True Negative, False Positive, and False Negative the same as shown
+in other tutorials such as [Jeremy's blog](https://www.jeremyjordan.me/evaluating-image-segmentation-models/).
+
+<img src="readme_images/precision_accuracy.png" width=500>
+
 
 ### These metrics are all tested with example data from the iris and digits dataset from `sklearn` in `code/examples/evaluating_clusters.py`
 
