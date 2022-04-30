@@ -113,7 +113,7 @@ As an example, here's what the elbow method determines for the number of cluster
 #### We can deduce this to mean roughly 3 clusters is best, as it forms the "elbow" (also called the knee sometimes) of this graph.
 
 __Classification Report__
-- Given the ground truth and predictions, the classification report can give information about the accuracy, precision, f1-score, and support
+- Given the ground truth and predictions, the classification report can give information about the __accuracy, precision, f1-score, and support__
 of the clustering algorithm by computing various formulas given the True Positive, True Negative, False Positive, and False Negative the same as shown
 in other tutorials such as [Jeremy's blog](https://www.jeremyjordan.me/evaluating-image-segmentation-models/).
 
@@ -131,5 +131,7 @@ knowledge to understand, implement, and manipulate these algorithms:
 * [Khushijain](https://medium.com/nerd-for-tech/k-means-python-implementation-from-scratch-8400f30b8e5c)
 * [The Academician](https://www.youtube.com/watch?v=FA-hJBu5Bkc&t=1469s)
 * [GeeksforGeeks](https://www.geeksforgeeks.org/ml-fuzzy-clustering/)
+* [Jeremy Jordan](https://www.jeremyjordan.me/evaluating-image-segmentation-models/)
+* [SciKit Tutorial](https://scikit-learn.org/stable/modules/clustering.html#clustering)
 
 [//]: # (TODO: Add other tutorials I find and a tutorial for evaluation.)
