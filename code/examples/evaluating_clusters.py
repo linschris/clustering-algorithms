@@ -31,7 +31,7 @@ def main():
     ''' Evaluating based on recall, precision, accuracy in a classification report '''
     print(classification_report(ground_truth, iris_labels))
 
-    determineNumClusters(digits_data, 30)
+    determineNumClusters(iris_data, 10)
 
 def printDBScore(data, labels):
     '''

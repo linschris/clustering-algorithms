@@ -177,6 +177,7 @@
       \strng{authorbibnamehash}{e179043a0d3c6c0a11708dc90e55c885}
       \strng{authornamehash}{e179043a0d3c6c0a11708dc90e55c885}
       \strng{authorfullhash}{e179043a0d3c6c0a11708dc90e55c885}
+      \field{extraname}{1}
       \field{sortinit}{l}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -196,6 +197,113 @@
       \endverb
       \verb{url}
       \verb https://scikit-learn/stable/datasets/toy_dataset.html
+      \endverb
+    \endentry
+    \entry{skLearnKMeans2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e179043a0d3c6c0a11708dc90e55c885}{%
+           family={{sk-learn (last)}},
+           familyi={l\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{e179043a0d3c6c0a11708dc90e55c885}
+      \strng{fullhash}{e179043a0d3c6c0a11708dc90e55c885}
+      \strng{bibnamehash}{e179043a0d3c6c0a11708dc90e55c885}
+      \strng{authorbibnamehash}{e179043a0d3c6c0a11708dc90e55c885}
+      \strng{authornamehash}{e179043a0d3c6c0a11708dc90e55c885}
+      \strng{authorfullhash}{e179043a0d3c6c0a11708dc90e55c885}
+      \field{extraname}{2}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Examples using sklearn.cluster.KMeans: Release Highlights for scikit-learn 0.23 Release Highlights for scikit-learn 0.23, Demonstration of k-means assumptions Demonstration of k-means assumptions, ...}
+      \field{journaltitle}{scikit-learn}
+      \field{title}{sklearn.cluster.{KMeans}}
+      \field{urlday}{1}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/Users/lchris/Zotero/storage/9RIASNFI/sklearn.cluster.KMeans.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://scikit-learn/stable/modules/generated/sklearn.cluster.KMeans.html
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn/stable/modules/generated/sklearn.cluster.KMeans.html
+      \endverb
+    \endentry
+    \entry{Mittal2021}{article}{}
+      \name{author}{6}{}{%
+        {{hash=7e9822f308a099a480b9a714b237f86e}{%
+           family={Mittal},
+           familyi={M\bibinitperiod},
+           given={Himanshu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=34e6715e366433a9ff348383acc8ca28}{%
+           family={Pandey},
+           familyi={P\bibinitperiod},
+           given={Avinash\bibnamedelima Chandra},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=f31032d30772f4832fd415f69718a4f8}{%
+           family={Saraswat},
+           familyi={S\bibinitperiod},
+           given={Mukesh},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3c6c41e77dce1b3966ba88bf6647ee5c}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Sumit},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c69dc02ecf9dcecf60ff34bfd8502454}{%
+           family={Pal},
+           familyi={P\bibinitperiod},
+           given={Raju},
+           giveni={R\bibinitperiod}}}%
+        {{hash=467f7ea75157164a16e30ca2ec3d2586}{%
+           family={Modwel},
+           familyi={M\bibinitperiod},
+           given={Garv},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{17331f7915beade926be694065c48f54}
+      \strng{fullhash}{b384981defff6301ded95c50a3785580}
+      \strng{bibnamehash}{17331f7915beade926be694065c48f54}
+      \strng{authorbibnamehash}{17331f7915beade926be694065c48f54}
+      \strng{authornamehash}{17331f7915beade926be694065c48f54}
+      \strng{authorfullhash}{b384981defff6301ded95c50a3785580}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Image segmentation is an essential phase of computer vision in which useful information is extracted from an image that can range from finding objects while moving across a room to detect abnormalities in a medical image. As image pixels are generally unlabelled, the commonly used approach for the same is clustering. This paper reviews various existing clustering based image segmentation methods. Two main clustering methods have been surveyed, namely hierarchical and partitional based clustering methods. As partitional clustering is computationally better, further study is done in the perspective of methods belonging to this class. Further, literature bifurcates the partitional based clustering methods into three categories, namely K-means based methods, histogram-based methods, and meta-heuristic based methods. The survey of various performance parameters for the quantitative evaluation of segmentation results is also included. Further, the publicly available benchmark datasets for image-segmentation are briefed.}
+      \field{issn}{1380-7501, 1573-7721}
+      \field{journaltitle}{Multimedia Tools and Applications}
+      \field{month}{2}
+      \field{shorttitle}{A comprehensive survey of image segmentation}
+      \field{title}{A comprehensive survey of image segmentation: clustering methods, performance parameters, and benchmark datasets}
+      \field{urlday}{26}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/s11042-021-10594-9
+      \endverb
+      \verb{file}
+      \verb Mittal et al. - 2021 - A comprehensive survey of image segmentation clus.pdf:/Users/lchris/Zotero/storage/E2C2JD4K/Mittal et al. - 2021 - A comprehensive survey of image segmentation clus.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s11042-021-10594-9
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s11042-021-10594-9
       \endverb
     \endentry
     \entry{Roy2014}{article}{}

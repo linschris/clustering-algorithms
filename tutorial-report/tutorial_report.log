@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.28)  30 APR 2022 18:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.28)  1 MAY 2022 13:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -539,69 +539,117 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 
 ]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 88.
- [2]
+
+Underfull \hbox (badness 1552) in paragraph at lines 146--147
+[]\OT1/ptm/m/n/10 The sec-ond pro-posed method was Davie Boulden's
+ []
+
+[2]
+<../readme_images//confusion_matrix.png, id=87, 643.40375pt x 547.04375pt>
+File: ../readme_images//confusion_matrix.png Graphic file (type png)
+<use ../readme_images//confusion_matrix.png>
+Package pdftex.def Info: ../readme_images//confusion_matrix.png  used on input line 168.
+(pdftex.def)             Requested size: 193.02261pt x 164.11438pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../readme_images//iris_elbow.png, id=89, 642.4pt x 544.0325pt>
+File: ../readme_images//iris_elbow.png Graphic file (type png)
+<use ../readme_images//iris_elbow.png>
+Package pdftex.def Info: ../readme_images//iris_elbow.png  used on input line 176.
+(pdftex.def)             Requested size: 192.72148pt x 163.211pt.
+<../readme_images//class_report_iris.png, id=90, 387.94937pt x 172.645pt>
+File: ../readme_images//class_report_iris.png Graphic file (type png)
+<use ../readme_images//class_report_iris.png>
+Package pdftex.def Info: ../readme_images//class_report_iris.png  used on input line 184.
+(pdftex.def)             Requested size: 116.3857pt x 51.79388pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.200 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.200 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.200 
+       </Users/lchris/Desktop/Coding/schoolprojects/comp390/tut-report/tutorial-report/../readme_images//confusion_matrix.png> </Users/lchris/Desktop/Coding/schoolprojects/comp390/tut-report/tutorial-report/../readme_images//iris_elbow.png> </Users/lchris/Desktop/Coding/schoolprojects/comp390/tut-report/tutorial-report/../readme_images//class_report_iris.png>]
 
 Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Please use 'family-given' instead.
 (biblatex)                Using 'family-given' now.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\OT1/ptm/m/n/10 Akta[], Ya[]gmur []i[]gdem. \OT1/ptm/m/it/10 Im-age Seg-men-ta-tion
  []
 
 
-Underfull \hbox (badness 1701) in paragraph at lines 156--156
+Underfull \hbox (badness 1701) in paragraph at lines 211--211
 \OT1/ptm/m/it/10 with Clus-ter-ing\OT1/ptm/m/n/10 . en. Sept. 2021. \OT1/ptm/m/sc/10 url\OT1/ptm/m/n/10 : []$\OT1/pcr/m/n/10 https :
  []
 
 
-Underfull \hbox (badness 1527) in paragraph at lines 156--156
+Underfull \hbox (badness 1527) in paragraph at lines 211--211
 \OT1/pcr/m/n/10 / / towardsdatascience . com / image -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 \OT1/pcr/m/n/10 segmentation -[] with -[] clustering -[]
  []
 
 
-Underfull \hbox (badness 6252) in paragraph at lines 156--156
+Underfull \hbox (badness 6252) in paragraph at lines 211--211
 []\OT1/ptm/m/n/10 Jordan, Jeremy. \OT1/ptm/m/it/10 Eval-u-at-ing im-age seg-men-ta-tion
  []
 
 
-Underfull \hbox (badness 6775) in paragraph at lines 156--156
+Underfull \hbox (badness 6775) in paragraph at lines 211--211
 \OT1/ptm/m/it/10 mod-els. \OT1/ptm/m/n/10 en. May 2018. \OT1/ptm/m/sc/10 url\OT1/ptm/m/n/10 : []$\OT1/pcr/m/n/10 https : / /
  []
 
 
-Underfull \hbox (badness 1527) in paragraph at lines 156--156
+Underfull \hbox (badness 1527) in paragraph at lines 211--211
 \OT1/pcr/m/n/10 www . jeremyjordan . me / evaluating -[]
  []
 
-[3
 
-] (/Users/lchris/Desktop/Coding/schoolprojects/comp390/tut-report/tutorial-report/tutorial_report.aux)
+Underfull \hbox (badness 4621) in paragraph at lines 211--211
+[]\OT1/ptm/m/n/10 sk-learn (last). \OT1/ptm/m/it/10 sklearn.cluster.KMeans\OT1/ptm/m/n/10 . en. \OT1/ptm/m/sc/10 url\OT1/ptm/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 3068) in paragraph at lines 211--211
+[]$\OT1/pcr/m/n/10 https : / / scikit -[] learn / stable /
+ []
+
+[4] (/Users/lchris/Desktop/Coding/schoolprojects/comp390/tut-report/tutorial-report/tutorial_report.aux)
 Package rerunfilecheck Info: File `tutorial_report.out' has not changed.
-(rerunfilecheck)             Checksum: 3B5F4614A4BF69FB535B8FE175F613EF;932.
+(rerunfilecheck)             Checksum: 454D486E41E9DEEE25B9F8CFF2D9CBEB;1025.
 Package logreq Info: Writing requests to 'tutorial_report.run.xml'.
 \openout1 = `tutorial_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17667 strings out of 478994
- 297518 string characters out of 5858184
- 1008548 words of memory out of 5000000
- 34913 multiletter control sequences out of 15000+600000
+ 17712 strings out of 478994
+ 298683 string characters out of 5858184
+ 1010149 words of memory out of 5000000
+ 34947 multiletter control sequences out of 15000+600000
  425028 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,7n,75p,1812b,1266s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,7n,75p,1683b,1282s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/lchris/Desktop/Coding/schoolprojects/comp390/tut-report/tutorial-report/tutorial_report.pdf (3 pages, 152774 bytes).
+Output written on /Users/lchris/Desktop/Coding/schoolprojects/comp390/tut-report/tutorial-report/tutorial_report.pdf (4 pages, 453956 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 187 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
