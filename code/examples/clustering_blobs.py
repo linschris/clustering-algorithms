@@ -5,6 +5,10 @@ import numpy as np
 # from implementations.FuzzyCMeans import FuzzyCMeans
 from implementations.KMeans import KMeans
 
+'''
+    KMeans Code
+    Originated from Aktas's Tutorial: https://towardsdatascience.com/image-segmentation-with-clustering-b4bbc98f2ee6
+'''
 def cluster_blobs(num_datapoints=100, num_clusters=4):
     '''Step 1: Create the (blobs of) datapoints '''
     # make_blobs returns the generated samples (numpy array of 2D points) as well as the clusters they're in (int array)

@@ -16,5 +16,235 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Aktas2021}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=eaaf66f25a55f3fcd4340dfc47098185}{%
+           family={Aktaş},
+           familyi={A\bibinitperiod},
+           given={Yağmur\bibnamedelima Çiğdem},
+           giveni={Y\bibinitperiod\bibinitdelim Ç\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{eaaf66f25a55f3fcd4340dfc47098185}
+      \strng{fullhash}{eaaf66f25a55f3fcd4340dfc47098185}
+      \strng{bibnamehash}{eaaf66f25a55f3fcd4340dfc47098185}
+      \strng{authorbibnamehash}{eaaf66f25a55f3fcd4340dfc47098185}
+      \strng{authornamehash}{eaaf66f25a55f3fcd4340dfc47098185}
+      \strng{authorfullhash}{eaaf66f25a55f3fcd4340dfc47098185}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Fundamentals of K-Means and Fuzzy-C Means Clustering and their usage for Image Segmentation}
+      \field{journaltitle}{Medium}
+      \field{month}{9}
+      \field{title}{Image {Segmentation} with {Clustering}}
+      \field{urlday}{1}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/Users/lchris/Zotero/storage/VDY3AVX3/image-segmentation-with-clustering-b4bbc98f2ee6.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/image-segmentation-with-clustering-b4bbc98f2ee6
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/image-segmentation-with-clustering-b4bbc98f2ee6
+      \endverb
+    \endentry
+    \entry{C3Clustering}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b8d74f7bf4bc4797cbde4c8c475d17e5}{%
+           family={C3AI},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b8d74f7bf4bc4797cbde4c8c475d17e5}
+      \strng{fullhash}{b8d74f7bf4bc4797cbde4c8c475d17e5}
+      \strng{bibnamehash}{b8d74f7bf4bc4797cbde4c8c475d17e5}
+      \strng{authorbibnamehash}{b8d74f7bf4bc4797cbde4c8c475d17e5}
+      \strng{authornamehash}{b8d74f7bf4bc4797cbde4c8c475d17e5}
+      \strng{authorfullhash}{b8d74f7bf4bc4797cbde4c8c475d17e5}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Clustering}
+      \verb{urlraw}
+      \verb https://c3.ai/glossary/data-science/clustering/
+      \endverb
+      \verb{url}
+      \verb https://c3.ai/glossary/data-science/clustering/
+      \endverb
+    \endentry
+    \entry{Jordan2018}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7f1a9f81862721ee471c6105ea841dd3}{%
+           family={Jordan},
+           familyi={J\bibinitperiod},
+           given={Jeremy},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{7f1a9f81862721ee471c6105ea841dd3}
+      \strng{fullhash}{7f1a9f81862721ee471c6105ea841dd3}
+      \strng{bibnamehash}{7f1a9f81862721ee471c6105ea841dd3}
+      \strng{authorbibnamehash}{7f1a9f81862721ee471c6105ea841dd3}
+      \strng{authornamehash}{7f1a9f81862721ee471c6105ea841dd3}
+      \strng{authorfullhash}{7f1a9f81862721ee471c6105ea841dd3}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{When evaluating a standard machine learning model, we usually classify our predictions into four categories: true positives, false positives, true negatives, and false negatives. However, for the dense prediction task of image segmentation, it's not immediately clear what counts as a \&quot;true positive\&quot; and, more generally, how we}
+      \field{journaltitle}{Jeremy Jordan}
+      \field{month}{5}
+      \field{title}{Evaluating image segmentation models.}
+      \field{urlday}{29}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/Users/lchris/Zotero/storage/3NHAXKEH/evaluating-image-segmentation-models.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jeremyjordan.me/evaluating-image-segmentation-models/
+      \endverb
+      \verb{url}
+      \verb https://www.jeremyjordan.me/evaluating-image-segmentation-models/
+      \endverb
+    \endentry
+    \entry{Khushijain2021}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d6a7e58b8290bf401b9877794eb3825c}{%
+           family={Khushijain},
+           familyi={K\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{d6a7e58b8290bf401b9877794eb3825c}
+      \strng{fullhash}{d6a7e58b8290bf401b9877794eb3825c}
+      \strng{bibnamehash}{d6a7e58b8290bf401b9877794eb3825c}
+      \strng{authorbibnamehash}{d6a7e58b8290bf401b9877794eb3825c}
+      \strng{authornamehash}{d6a7e58b8290bf401b9877794eb3825c}
+      \strng{authorfullhash}{d6a7e58b8290bf401b9877794eb3825c}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Clustering is the process of dividing the entire data into groups (known as clusters) based on the patterns in the data. It is an…}
+      \field{journaltitle}{Nerd For Tech}
+      \field{month}{7}
+      \field{shorttitle}{K-{Means} {Clustering}}
+      \field{title}{K-{Means} {Clustering}: {Python} {Implementation} from {Scratch}}
+      \field{urlday}{1}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/Users/lchris/Zotero/storage/V6CYDGWN/k-means-python-implementation-from-scratch-8400f30b8e5c.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://medium.com/nerd-for-tech/k-means-python-implementation-from-scratch-8400f30b8e5c
+      \endverb
+      \verb{url}
+      \verb https://medium.com/nerd-for-tech/k-means-python-implementation-from-scratch-8400f30b8e5c
+      \endverb
+    \endentry
+    \entry{Roy2014}{article}{}
+      \name{author}{5}{}{%
+        {{hash=c3e3f9829fc7042dcc81ad95347ca796}{%
+           family={Roy},
+           familyi={R\bibinitperiod},
+           given={Payel},
+           giveni={P\bibinitperiod}}}%
+        {{hash=85943a7cc40c9253b98fa0c121598632}{%
+           family={Goswami},
+           familyi={G\bibinitperiod},
+           given={Srijan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0fc0b342e2f2f6aec5b94cf4a879ffd2}{%
+           family={Chakraborty},
+           familyi={C\bibinitperiod},
+           given={Sayan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=09b378829e5892f2ea698c737416b88d}{%
+           family={Azar},
+           familyi={A\bibinitperiod},
+           given={Ahmad},
+           giveni={A\bibinitperiod}}}%
+        {{hash=659a6768e590976867dabad7f147d36c}{%
+           family={Dey},
+           familyi={D\bibinitperiod},
+           given={Nilanjan},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{2566ad1c5e09f8b3b016870d223c8097}
+      \strng{fullhash}{4637c4c8314e626ebe7152d4aa1ccdb7}
+      \strng{bibnamehash}{2566ad1c5e09f8b3b016870d223c8097}
+      \strng{authorbibnamehash}{2566ad1c5e09f8b3b016870d223c8097}
+      \strng{authornamehash}{2566ad1c5e09f8b3b016870d223c8097}
+      \strng{authorfullhash}{4637c4c8314e626ebe7152d4aa1ccdb7}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Abstract In the domain of image processing, image segmentation has become one of the key application that is involved in most of the image based operations. Image segmentation refers to the process of breaking or partitioning any image. Although, like several image processing operations, image segmentation also faces some problems and issues when segmenting process becomes much more complicated. Previously lot of work has proved that Rough-set theory can be a useful method to overcome such complications during ...}
+      \field{journaltitle}{International Journal of Rough Sets and Data Analysis}
+      \field{month}{9}
+      \field{shorttitle}{Image {Segmentation} {Using} {Rough} {Set} {Theory}}
+      \field{title}{Image {Segmentation} {Using} {Rough} {Set} {Theory}: {A} {Review}}
+      \field{volume}{1}
+      \field{year}{2014}
+      \field{pages}{62\bibrangedash 74}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.4018/ijrsda.2014070105
+      \endverb
+    \endentry
+    \entry{TheAcademician2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6ebced0d946232a7f8d9f2e593354e8}{%
+           family={{The Academician}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6ebced0d946232a7f8d9f2e593354e8}
+      \strng{fullhash}{b6ebced0d946232a7f8d9f2e593354e8}
+      \strng{bibnamehash}{b6ebced0d946232a7f8d9f2e593354e8}
+      \strng{authorbibnamehash}{b6ebced0d946232a7f8d9f2e593354e8}
+      \strng{authornamehash}{b6ebced0d946232a7f8d9f2e593354e8}
+      \strng{authorfullhash}{b6ebced0d946232a7f8d9f2e593354e8}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Fuzzy c Means (FCM) using simple example and Python}
+      \field{month}{5}
+      \field{title}{48. {Fuzzy} {C} {Means} ({FCM}) using simple example and {Python}}
+      \field{urlday}{1}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=FA-hJBu5Bkc
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=FA-hJBu5Bkc
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

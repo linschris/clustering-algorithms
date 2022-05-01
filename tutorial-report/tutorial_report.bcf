@@ -2344,6 +2344,12 @@
     <bcf:datasource type="file" datatype="bibtex">refs.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">C3Clustering</bcf:citekey>
+    <bcf:citekey order="2">Roy2014</bcf:citekey>
+    <bcf:citekey order="3">Khushijain2021</bcf:citekey>
+    <bcf:citekey order="3">TheAcademician2020</bcf:citekey>
+    <bcf:citekey order="3">Jordan2018</bcf:citekey>
+    <bcf:citekey order="3">Aktas2021</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

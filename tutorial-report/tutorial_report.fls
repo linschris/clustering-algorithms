@@ -768,8 +768,16 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/times/ptmb.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT /Users/lchris/Desktop/Coding/schoolprojects/comp390/tut-report/tutorial-report/tutorial_report.aux
 INPUT /Users/lchris/Desktop/Coding/schoolprojects/comp390/tut-report/tutorial-report/tutorial_report.out
 INPUT /Users/lchris/Desktop/Coding/schoolprojects/comp390/tut-report/tutorial-report/tutorial_report.out
@@ -789,3 +797,4 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
