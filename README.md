@@ -106,7 +106,7 @@ For the sklearn library, the K-Means method has a `_inertia` property which is t
 
 As an example, here's what the elbow method determines for the number of clusters for this image:
 
-<img src="code/images/corgi-white.jpeg" width=400>
+<img src="code/example_images/corgi-white.jpeg" width=400>
 
 <img src="readme_images/corgi-white-elbow.png" width=400>
 
