@@ -23,8 +23,10 @@ def KMeans(data, k=2):
 
     # Select the random K centroids (of clusters) from the data.
     # Not in the tutorial, but converted to dataframe for useful sample function to do this.
-    # centroids = pd.DataFrame(data).sample(n=k).values
-    centroids = [[random.randint(-1000, 1000),random.randint(-1000, 1000)] for i in range(k)]
+    centroids = pd.DataFrame(data).sample(n=k).values
+
+    # Also possible to just simply pick random values
+    # centroids = [[random.randint(-1000, 1000),random.randint(-1000, 1000)] for i in range(k)]
 
     # While the cluster center's position have NOT changed
     diff = 1
