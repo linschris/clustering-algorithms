@@ -162,6 +162,42 @@
       \verb https://medium.com/nerd-for-tech/k-means-python-implementation-from-scratch-8400f30b8e5c
       \endverb
     \endentry
+    \entry{skLearn2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e179043a0d3c6c0a11708dc90e55c885}{%
+           family={{sk-learn (last)}},
+           familyi={l\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{e179043a0d3c6c0a11708dc90e55c885}
+      \strng{fullhash}{e179043a0d3c6c0a11708dc90e55c885}
+      \strng{bibnamehash}{e179043a0d3c6c0a11708dc90e55c885}
+      \strng{authorbibnamehash}{e179043a0d3c6c0a11708dc90e55c885}
+      \strng{authornamehash}{e179043a0d3c6c0a11708dc90e55c885}
+      \strng{authorfullhash}{e179043a0d3c6c0a11708dc90e55c885}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{scikit-learn comes with a few small standard datasets that do not require to download any file from some external website. They can be loaded using the following functions: These datasets are usefu...}
+      \field{journaltitle}{scikit-learn}
+      \field{title}{7.1. {Toy} datasets}
+      \field{urlday}{1}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/Users/lchris/Zotero/storage/DI95CEJP/toy_dataset.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://scikit-learn/stable/datasets/toy_dataset.html
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn/stable/datasets/toy_dataset.html
+      \endverb
+    \endentry
     \entry{Roy2014}{article}{}
       \name{author}{5}{}{%
         {{hash=c3e3f9829fc7042dcc81ad95347ca796}{%
