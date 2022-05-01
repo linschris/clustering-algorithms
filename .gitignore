@@ -2,11 +2,15 @@ __pycache__
 *.csv
 update_requirements.txt
 scifuzzy
-
 *.aux
 *.bcf
 *.log
 *.out
 *.xml
-*.sqnctex.gz
+*.synctex.gz
 *.xml
+*.pdf
+*.fls
+*.fdb_latexmk
+*.blg
+*.bbl
