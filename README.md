@@ -122,6 +122,10 @@ in other tutorials such as [Jeremy's blog](https://www.jeremyjordan.me/evaluatin
 
 ### These metrics are all tested with example data from the iris and digits dataset from `sklearn` in `code/examples/evaluating_clusters.py`
 
+### As a side note, I recommend going through the examples top-down, starting with `clustering_blobs.py` and ending with `evaluating_clusters.py`, as it gradually increases in complexity.
+
+### Lots of comments, going through the steps of each example are included!
+
 ### Gratitude
 
 A special thanks to these tutorials, explanations, and guides for teaching me the

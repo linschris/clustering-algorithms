@@ -1,6 +1,4 @@
 __pycache__
 *.csv
 update_requirements.txt
-BSDS300
-old
 scifuzzy
