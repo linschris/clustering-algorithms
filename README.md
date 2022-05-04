@@ -66,6 +66,8 @@ With this high level, I encourage you to look into `code/examples/implementation
 
 A brief thing to note is that for FCM (Fuzzy C Means), to allow for "soft" clustering (i.e. a datapoint can reside in many clusters), we utilize membership or "belongingness" values based on a distance metric as well. In a very similar fashion to K-Means (but different mathematically), we readjust the centroid positions and belongingness values to form the clusters, with the idea of minimizing the sum of distance(s) of data points (w.r.t membership values) to the nearest given cluster for that data point!
 
+Before we continue, it's worthwhile to note that while FCM can be viewed and tested with your own data, it won't work with sklearn's evaluation and dataset functions due to a difference in the types of inputs and output from the FCM algorithm.
+
 ### What do we need data-wise?
 
 From a high level, this is the data we'll need (colors refer to same colors of modules in previous image):

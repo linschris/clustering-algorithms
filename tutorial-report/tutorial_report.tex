@@ -60,21 +60,25 @@
 
 \section {Abstract}
 
-The following tutorial report dives into two clustering algorithms, Fuzzy C Means and K Means, and implements them from scratch in Python with the help of online tutorials. Afterward, the K-Means algorithm is evaluated on an iris-flower image dataset using a confusion matrix, elbow method, classification report, and Davies-Bouldin Score as different metrics. Finally, these metrics are reported and discussed. While the K-Means algorithm was found to perform well in clustering these images, there are many caveats to this result including lack of other comparisons and frictions in reproducibility due to the lack of identified classes in clustering needed for classification metric.
+% The following tutorial report dives into two clustering algorithms, Fuzzy C Means and K Means, and implements them from scratch in Python with the help of online tutorials. After, sklearn's K-Means algorithm was tested on blobs of datapoints, pixels of an image, and batches of images to visualize and understand (through implementation) how the algorithms worked. Finally, the K-Means algorithm is evaluated on an iris-flower image dataset using a confusion matrix, elbow method, classification report, and Davies-Bouldin Score as different metrics to determine the strength of the algorithm. Finally, these metrics are reported and discussed to understand how the evaluation metrics worked and where the K-Means is strong and weak. While the K-Means algorithm was found to perform well in clustering these images, there are many caveats to this result including lack of other comparisons and frictions in reproducibility due to the lack of identified classes in clustering needed for classification metrics.
+
+The following tutorial report dives into the K Means clustering algorithm, implementing it from scratch in Python with the help of online tutorials. After, sklearn's K-Means algorithm was tested on blobs of datapoints, pixels of an image, and batches of images to visualize and understand (through implementation) how the algorithms worked. Finally, the K-Means algorithm is evaluated on an iris-flower image dataset using a confusion matrix, elbow method, classification report, and Davies-Bouldin Score as different metrics to determine the strength of the algorithm in clustering batches of images. Finally, these metrics are reported and discussed to understand and conclude on K-Means's strengths and weaknesses. While the K-Means algorithm was found to cluster images proficiently overall, K-Means struggled with images of high similarity, but slight difference (like the iris virginica and iris versicolor flower).
 
 \section {Methods}
 
 \subsection {Approach/Framework}
 
-The general approach to grouping images or any form of data point is the idea of clustering, where the main goal is to “...[segment] a population into subgroups where members are more similar to each other… based on certain observed features” \cite{C3Clustering}. In the context of my COMPS project, being able to separate images means being able to separate them apart based on their differences in objects, shapes, or environment. The main goal is not to recognize the objects, but to recognize meaningful differences or similarities between two images based on their visual similarity. Therefore, unlike with clustering simple blobs or batches of data points, to cluster images requires “cluster[ing] pixels into different image regions, which are regions corresponding to individual objects, surfaces or natural parts of the objects” \cite{Roy2014}. As this is an unsupervised version of machine learning (allowing for mainly testing), there is no response “class”, or that the human needs to associate meaning with each cluster it generates.
+The general approach to grouping images or any form of data point is the idea of clustering, where the main goal is to “...[segment] a population into subgroups where members are more similar to each other… based on certain observed features” \cite{C3Clustering}. Being able to separate images means being able to separate them apart based on their differences in objects, shapes, or environment. The main goal is not to recognize the objects, but to recognize meaningful differences or similarities between two images based on their visual similarity. Therefore, unlike with clustering simple blobs or batches of data points, to cluster images requires “cluster[ing] pixels into different image regions, which are regions corresponding to individual objects, surfaces or natural parts of the objects” \cite{Roy2014}. As this is an unsupervised version of machine learning (allowing for mainly testing), there is no response “class”, or that the human needs to associate meaning with each cluster it generates.
 
-The two clustering algorithms employed are Fuzzy C-Means and K-Means. With the help of tutorials \cite{Khushijain2021,TheAcademician2020, Jordan2018,Aktas2021}, I implemented both algorithms from scratch, utilized K-Means from the sklearn library on three different examples: batches of data points, the pixels of a given image, and batches of images. Before clustering each of these data formats, I preprocessed them using functions such as OpenCV’s image read function to load images, creating arrays of data points of 5 dimensions to represent its position and the values for each color channel (red, green, blue). To cluster only on the colors of the pixels, numpy’s reshape function was utilized to extract only the values from each color channel, creating three-dimensional data points. After performing sklearn’s K-Means algorithm on these data points, by utilizing the algorithm’s labels for each datapoint’s cluster, I combined each cluster’s data points into a single 2-D array, creating a 3-D array of \(k\) rows of 2-D arrays containing these data points; \(k\) represents the user-inputed number of clusters. The following arrays of data points were plotted using matplotlib, coloring pixels of the same cluster (i.e. in the same 2-D array) to show the results of the full clustering. 
+With the help of tutorials \cite{Khushijain2021, Jordan2018, Aktas2021}, I implemented the K-Means algorithms from scratch, utilized K-Means from the sklearn library on three different examples: batches of data points, the pixels of a given image, and batches of images. The sklearn library was utilized, as opposed to the original implementation, as the sklearn library (unlike the implementation) can only cluster on datapoints of 1 or 2 dimensions which is too few for a batch of images or the pixels of an image. Before clustering each of these data formats, I preprocessed them using functions such as OpenCV’s image read function to load images, creating arrays of data points of 5 dimensions to represent its position and the values for each color channel (red, green, blue). To cluster only on the colors of the pixels, numpy’s reshape function was utilized to extract only the values from each color channel, creating three-dimensional data points. After performing sklearn’s K-Means algorithm on these data points, by utilizing the algorithm’s labels for each datapoint’s cluster, I combined each cluster’s data points into a single 2-D array, creating a 3-D array of \(k\) rows of 2-D arrays containing these data points; \(k\) represents the user-inputed number of clusters. The following arrays of data points were plotted using matplotlib, coloring pixels of the same cluster (i.e. in the same 2-D array) to show the results of the full clustering. 
 
-With clustering the images from the digits dataset (in particular), the digits beforehand were preprocessed to have their pixel values inverted by subtracting the pixel value from 255. These are primarily gray-scaled images, with the majority of the pixels being black or dark gray. By inverting the pixel values, the clustering algorithm will have an easier time clustering as it needs to only determine the dark pixels primarily.
+% The two clustering algorithms employed are Fuzzy C-Means and K-Means. With the help of tutorials \cite{Khushijain2021,TheAcademician2020, Jordan2018,Aktas2021}, I implemented both algorithms from scratch, utilized K-Means from the sklearn library on three different examples: batches of data points, the pixels of a given image, and batches of images. Before clustering each of these data formats, I preprocessed them using functions such as OpenCV’s image read function to load images, creating arrays of data points of 5 dimensions to represent its position and the values for each color channel (red, green, blue). To cluster only on the colors of the pixels, numpy’s reshape function was utilized to extract only the values from each color channel, creating three-dimensional data points. After performing sklearn’s K-Means algorithm on these data points, by utilizing the algorithm’s labels for each datapoint’s cluster, I combined each cluster’s data points into a single 2-D array, creating a 3-D array of \(k\) rows of 2-D arrays containing these data points; \(k\) represents the user-inputed number of clusters. The following arrays of data points were plotted using matplotlib, coloring pixels of the same cluster (i.e. in the same 2-D array) to show the results of the full clustering. 
+
+With clustering the images from the digits dataset (in particular), the digits beforehand were preprocessed to have their pixel values inverted by subtracting the pixel value from 255. These are primarily gray-scaled images, with the majority of the pixels being black or dark gray. By inverting the pixel values, the clustering algorithm will have an easier time clustering as it needs to only cluster on the dark pixels primarily.
 
 \subsection {Datasets}
 
-The datasets used by both my algorithms and my evaluation came from two of the seven toy datasets included in the sklearn library \cite{skLearn2020}, the iris data set and the digits data set. The iris data set includes 150 different instances of iris flowers, with three different classes of iris flowers of 50 instances each; each class here refers to a type of iris plant. The digits data set includes 1797 instances of digits, or 8-bit images; the colors or pixel values range from 0 to 16. The digits data set has 10 different classes, each referring to a digit from 0 to 9. 
+The datasets used by both my algorithms and my evaluation came from two of the seven toy datasets included in the sklearn library \cite{skLearn2020}, the iris data set and the digits data set. Not only do these datasets contain a large of instances and classes, but unlike other datasets, getting the ground truth is much simpler and make evaluation much easier (compared to something like the BSDS500). The iris data set includes 150 different instances of iris flowers, with three different classes of iris flowers of 50 instances each; each class here refers to a type of iris plant. The digits data set includes 1797 instances of digits, or 8-bit images; the colors or pixel values range from 0 to 16. The digits data set has 10 different classes, each referring to a digit from 0 to 9. 
 
 
 \subsection {Algorithms}
@@ -84,88 +88,84 @@ The datasets used by both my algorithms and my evaluation came from two of the s
 A very well-known, partition-type clustering algorithm is K-Means. Partition-based clustering refers to a harder (meaning more strict) form of partitioning where every data point can only be in one cluster. The main goal of this algorithm is to create partitions of data points, by creating points of relevance called clusters, which minimize the distance from any given data point to any given cluster. The distance metric utilized by K-Means is Euclidean distance where the distance from a data point \(x_i\) to a cluster \(x_j \) with d dimensions can be calculated by:
 \(D_{i, j} = \sum_{l=1}^d \sqrt{|x_{il}^2 - x_{jl}^2|} \). In my own implementation (for learning, understanding, and documentation), I utilized Euclidean distance for only 2 dimensions via: \(D_{i, j} = \sqrt{{|x_{j} - x_{i}|^2} + {|y_{j} - y_{i}|^2}} \). \\ In combination with my own implementation, I utilized Lloyd’s algorithm to compute and converge on centers of clusters, which is the same as for the library utilized in the tutorial, sklearn \cite{skLearnKMeans2020}.
 
-The soft (fuzzy) counterpart to the K-Means algorithm is the Fuzzy C-Means (FCM) algorithm. The FCM algorithm is “softer” or “fuzzier” as unlike K-Means, it allows for a data point to coexist in several different clusters with different values of membership (i.e. how much it relates to that given cluster). In comparison to the K-Means, the FCM algorithm is more popular for image segmentation because it’s more computational efficient (O(n) versus O(knt) \cite{Mittal2021}, applicable to multichannel data (i.e. colored images), and has the ability to model uncertainty in the data \cite{Roy2014}. In the context of the high number of pixels being grouped upon, as well as the channels of color which apply to colored images, it’s clear that an algorithm like Fuzzy C Means is a very good option for image segmentation.
+% \subsubsection {Fuzzy C Means}
 
-\subsubsection {Fuzzy C Means}
+% The soft (fuzzy) counterpart to the K-Means algorithm is the Fuzzy C-Means (FCM) algorithm. The FCM algorithm is “softer” or “fuzzier” as unlike K-Means, it allows for a data point to coexist in several different clusters with different values of membership (i.e. how much it relates to that given cluster). In comparison to the K-Means, the FCM algorithm is more popular for image segmentation because it’s more computational efficient (O(n) versus O(knt) \cite{Mittal2021}, applicable to multichannel data (i.e. colored images), and has the ability to model uncertainty in the data \cite{Roy2014}. In the context of the high number of pixels being grouped upon, as well as the channels of color which apply to colored images, it’s clear that an algorithm like Fuzzy C Means is a very good option for image segmentation.
 
-Fuzzy C-Means, in a very similar fashion to K-Means, will utilize a Euclidean distance metric. However, FCM utilizes membership values of the data points, where every data point has a set of k membership values adding up to 1, with k being the number of clusters. These membership values will be randomly initialized for each data point, and tweaked depending on the distance metric from a data point to a cluster. The centers of the cluster will now be tweaked based on the mean of the data points as well as their membership values. In other words, the centroid’s data point will be most affected by data points which have a membership value high for that cluster. Mathematically, this is all represented by first calculating the centroid positions by computing \[ C_j = \frac{ \sum_{i}^{n} (m_{ij})^f * dp_i  }{  \sum_{i}^{n} (m_{ij})^f  }\] with \(n\) data points \(dp\), a cluster \(j\) and a given membership value of a data point \(i\) for a cluster \(j\) \(m_{ij}\). The new f value represents the fuzzifier, or what will convert a hard output into a soft output (i.e. less hard clustering); a value of 1 equates to K-Means, whereas infinity equates to all values being equally in the same cluster. After computing the new centroid values, the data point’s membership values will be equal to the euclidean distance from a data point i to cluster j, divided by the total euclidean distance to all clusters from the same data point. This is calculated as follows: \[m_{ij} = \frac{1}{\sum_{i=1}{k} (\frac{|dp_i - c_j|}{|dp_i - c_k|})^{\frac{1}{f-1}}} \]
+% Fuzzy C-Means, in a very similar fashion to K-Means, will utilize a Euclidean distance metric. However, FCM utilizes membership values of the data points, where every data point has a set of k membership values adding up to 1, with k being the number of clusters. These membership values will be randomly initialized for each data point, and tweaked depending on the distance metric from a data point to a cluster. The centers of the cluster will now be tweaked based on the mean of the data points as well as their membership values. In other words, the centroid’s data point will be most affected by data points which have a membership value high for that cluster. Mathematically, this is all represented by first calculating the centroid positions by computing \[ C_j = \frac{ \sum_{i}^{n} (m_{ij})^f * dp_i  }{  \sum_{i}^{n} (m_{ij})^f  }\] with \(n\) data points \(dp\), a cluster \(j\) and a given membership value of a data point \(i\) for a cluster \(j\) \(m_{ij}\). The new f value represents the fuzzifier, or what will convert a hard output into a soft output (i.e. less hard clustering); a value of 1 equates to K-Means, whereas infinity equates to all values being equally in the same cluster. After computing the new centroid values, the data point’s membership values will be equal to the euclidean distance from a data point i to cluster j, divided by the total euclidean distance to all clusters from the same data point. This is calculated as follows: \[m_{ij} = \frac{1}{\sum_{z=1}^{k} (\frac{|dp_i - c_j|}{|dp_i - c_z|})^{\frac{1}{f-1}}} \]
 
-To converge on membership values and centroid positions, we had the following psuedocode:
+% \subsubsection {Pseudocode}
 
-\subsubsection {Pseudocode}
+% \begin{algorithm}
+%   \caption{ K-Means: Lloyd's Algorithm }
+%   \textbf{Input:} \\
+%   \textit{k}: number of clusters \\
+%   \textit{data points} : array of data points of size n * d \\
+%   \indent ($n$ = number of data points, $d$ = number of dimensions per data point) \\
+%   \textbf{Output:} \\
+%   \textit{centroids}: positions of the centroids (arr of size k * d) \\
+%   \textit{clusters}: nearest cluster for each data point (arr of size n) \\
+%   \begin{algorithmic}[1]
+%     \State Initialize all data points to be in one cluster (to modify later), i.e. $ clusters = [0, ..., 0]$
+%     \State Select k random data points' positions to be the initial positions for the centroids
 
-\begin{algorithm}
-  \caption{ K-Means: Lloyd's Algorithm }
-  \textbf{Input:} \\
-  \textit{k}: number of clusters \\
-  \textit{data points} : array of data points of size n * d \\
-  \indent ($n$ = number of data points, $d$ = number of dimensions per data point) \\
-  \textbf{Output:} \\
-  \textit{centroids}: positions of the centroids (arr of size k * d) \\
-  \textit{clusters}: nearest cluster for each data point (arr of size n) \\
-  \begin{algorithmic}[1]
-    \State Initialize all data points to be in one cluster (to modify later), i.e. $ clusters = [0, ..., 0]$
-    \State Select k random data points' positions to be the initial positions for the centroids
+%     \While {centroid positions change}
+%      \For {$i \rightarrow n$ data points}
+%       \For {$j \rightarrow k$ clusters} 
+%       \State Calculate distance from data point i to cluster j
+%       \State Keep track of the closest cluster
+%       \EndFor 
+%       \State Store new closest cluster $l$ for each data point i ($clusters[i] = l$)
+%       \EndFor
+%       \State $$C_j = \sum_{x_i \in C_j} \frac{x_i}{n}$$
+%       New centroid position is the avg. of all its subsequent data point positions (refer to equation above)
+%       $$ centroids[j] = C_j$$
+%     \EndWhile \\
+%   \textbf{Returns} \textit{centroids, clusters}
+%   \end{algorithmic}
+% \end{algorithm}
 
-    \While {centroid positions change}
-     \For {$i \rightarrow n$ data points}
-      \For {$j \rightarrow k$ clusters} 
-      \State Calculate distance from data point i to cluster j
-      \State Keep track of the closest cluster
-      \EndFor 
-      \State Store new closest cluster $l$ for each data point i ($clusters[i] = l$)
-      \EndFor
-      \State $$C_j = \sum_{x_i \in C_j} \frac{x_i}{n}$$
-      New centroid position is the avg. of all its subsequent data point positions (refer to equation above)
-      $$ centroids[j] = C_j$$
-    \EndWhile \\
-  \textbf{Returns} \textit{centroids, clusters}
-  \end{algorithmic}
-\end{algorithm}
+% \begin{algorithm}
+%   \caption{ Fuzzy C-Means }
+%   \textbf{Input:} \\
+%   \textit{k}: number of clusters \\
+%   \textit{data points} : array of data points of size n * d \\
+%   \indent ($n$ = number of data points, $d$ = number of dimensions per data point) \\
+%   \textit{f} : softness of clustering $(2 < f < \infty)$\\
+%   \textbf{Output:} \\
+%   \textit{centroids}: positions of the centroids (arr of size k * d) \\
+%   \textit{clusters}: nearest cluster for each data point (arr of size n)
+%   \begin{algorithmic}[1]
+%     \State Initialize all membership values for each data point to be k random values which add to 1. 
+%     \State Set initial centroid positions to be at $[0, ..., 0]$
 
-\begin{algorithm}
-  \caption{ Fuzzy C-Means }
-  \textbf{Input:} \\
-  \textit{k}: number of clusters \\
-  \textit{data points} : array of data points of size n * d \\
-  \indent ($n$ = number of data points, $d$ = number of dimensions per data point) \\
-  \textit{f} : softness of clustering $(2 < f < \infty)$\\
-  \textbf{Output:} \\
-  \textit{centroids}: positions of the centroids (arr of size k * d) \\
-  \textit{clusters}: nearest cluster for each data point (arr of size n)
-  \begin{algorithmic}[1]
-    \State Initialize all membership values for each data point to be k random values which add to 1. 
-    \State Set initial centroid positions to be at $[0, ..., 0]$
+%     \While {centroid positions change}
+%      \For {$i \rightarrow k$ clusters}
+%       \For {$j \rightarrow n$ clusters} 
+%       \State Calculate new centroid positions $(C_j)$ using membership values
+%       \EndFor 
+%       \EndFor \\
+%     \For {$i \rightarrow n$ data points}
+%       \For {$j \rightarrow k$ clusters} 
+%         \State Recalculate the membership values $m_{ij}$ with the new centroid positions
+%       \EndFor
+%       \EndFor
+%     \EndWhile \\
 
-    \While {centroid positions change}
-     \For {$i \rightarrow k$ clusters}
-      \For {$j \rightarrow n$ clusters} 
-      \State Calculate new centroid positions $(C_j)$ using membership values
-      \EndFor 
-      \EndFor \\
-    \For {$i \rightarrow n$ data points}
-      \For {$j \rightarrow k$ clusters} 
-        \State Recalculate the membership values $m_{ij}$ with the new centroid positions
-      \EndFor
-      \EndFor
-    \EndWhile \\
-
-    Initialize clusters array with the cluster corresponding to each data point's highest membership value \\
-  \textbf{Returns} \textit{centroids, clusters}
-  \end{algorithmic}
-\end{algorithm}
+%     Initialize clusters array with the cluster corresponding to each data point's highest membership value \\
+%   \textbf{Returns} \textit{centroids, clusters}
+%   \end{algorithmic}
+% \end{algorithm}
 
 \section {Evaluation}
 
-Evaluation of the K-Means algorithm was performed using 
-“simple” images, or images with objects of few, distinct colors, 
-and the iris and digits datasets proposed in the Datasets section of this paper. A confusion matrix, elbow method, classification report, and Davies-Bouldin Score were all utilized to generate different metrics of accuracy of the clustering algorithms.
+Evaluation of the K-Means algorithm was performed using the iris and digits datasets proposed in the Datasets section of this paper. A confusion matrix, elbow method, classification report, and Davies-Bouldin Score were all utilized to generate different metrics of accuracy of the clustering algorithms; all of this metrics came as well from the sk-learn library. By comparing the predictions versus the truth, we can determine the strength of the clusters by determining if objects (flowers) of the same class are grouped together (i.e. using classification evaluation methods). As we cluster upon images, these metrics can show the strength of the clustering algorithm upon images of related visual characteristics, and whether they can separate highly similar, but different images.
 
-The first proposed method was a confusion matrix, where given the ground truth and the predictions, it will plot the numbers of correct and incorrect predictions in a matrix, with the correct predictions along the main diagonal (top left corner to bottom right corner) and the incorrect predictions on either side of the main diagonal; false negatives were on the top right side and false positive on the bottom left side. Given the class names (i.e. what digits or flowers), the Confusion Matrix can specifically tell which classes the algorithm struggled to cluster.
+The first proposed method was a confusion matrix, where given the ground truth and the predictions, it will plot the numbers of correct and incorrect predictions in a matrix, with the correct predictions along the main diagonal (top left corner to bottom right corner) and the incorrect predictions on either side of the main diagonal; false negatives were on the top right side and false positive on the bottom left side. Given the class names (i.e. what digits or flowers), the Confusion Matrix can specifically tell which classes the algorithm struggled to cluster. The Confusion Matrix can help us visualize how accurate the clusters are (without giving us a plain number), by showing the number of relevant objects are clustered with each other. 
 
-The second proposed method was Davie Boulden's Score, which can assess the strength of a clustering algorithm without knowing the ground truth. The score is defined as the "average similarity measure of each cluster with its most similar cluster, where similarity is the ratio of within-cluster distances to between-cluster distances" \cite{skLearn2020}. The minimum and best possible score is zero, with lower values indicating better clustering.
+The second proposed method was Davie Boulden's Score, which can assess the strength of a clustering algorithm without knowing the ground truth. The score is defined as the "average similarity measure of each cluster with its most similar cluster, where similarity is the ratio of within-cluster distances to between-cluster distances" \cite{skLearn2020}. The minimum and best possible score is zero, with lower values indicating better clustering. Not only can this tell us the strength without the dataset, but it can be compared amongst other algorithms easily if necessary.
 
-The third proposed method was the Classification Report, which when given the ground truth and prediction, can quickly calculate and give information about accuracy, precision, recall, and f1-score of the clustering algorithm by computing various ratios/formulas as shown where \(TP\) means the number of "true" predictions where the model predicts the correct class, \(TN\) means the number of true "false" predictions where the model predicts the image is not a given class, \(FN\) refers to the number of false negatives where the model falsely predicts an image is not a given class (but it truly is), and a \(FP\) refers to the number of false positives where the model says incorrectly that an image is of a certain class when it's in truth another one.
+The third proposed method was the Classification Report, which when given the ground truth and prediction, can quickly calculate and give information about accuracy, precision, recall, and f1-score of the clustering algorithm by computing various ratios/formulas as shown where \(TP\) means the number of "true" predictions where the model predicts the correct class, \(TN\) means the number of true "false" predictions where the model predicts the image is not a given class, \(FN\) refers to the number of false negatives where the model falsely predicts an image is not a given class (but it truly is), and a \(FP\) refers to the number of false positives where the model says incorrectly that an image is of a certain class when it's in truth another one. The classification report can give us a further idea of what relevant images were clustered properly
 
 \[P = \frac{TP}{TP + FP}\]
 \[R = \frac{TP}{TP + FN}\]
@@ -177,7 +177,7 @@ The final method, the "Elbow" Method evaluates the best number of clusters for c
 
 \[\sqrt{\sum_{x_i \in c_j}(x_{i} - c_{j})^2}\]
 
-As you plot more clusters, WCSS will decrease at a slower rate, and have diminishing returns. Once the graph begins to have a second bend, much like an elbow, where the elbow is formed tells you the best number of clusters.
+As you plot more clusters, WCSS will decrease at a slower rate, and have diminishing returns. Once the graph begins to have a second bend, much like an elbow, where the elbow is formed tells you the best number of clusters. The Elbow Method, from an evaluation standpoint, can also tell us if the rough number of classes in the data can be determined; it tell us how well the clustering algorithm sees the differences. If the clustering algorithm sees the images as the same, the elbow will form at a low number (which is not what we want).
 
 \subsection{Results}
 After performing the following evaluation methods on the K-Means algorithm with the Iris Dataset, we obtained the following results:
@@ -215,11 +215,16 @@ As well as, the generated Davie-Boulden's Score was 0.66, which is very strong c
 % Software Documentation = instructions for installing your code
 % A basic overview of how your code works
 
-The results we got above are predictable and expected. As we clustered upon the three different possible classes, the "elbow" formed around k = 3 clusters; this is the appropriate and expected number of clusters to work best roughly (since there are 3 classes of flowers). As well as, the classification report, in combination with our confusion matrix, show the different scores across the different classes. As the first class (zero) was predictedly entirely correctly, the scores will all be ones, as the true positives and true negative will be equal to the total number of TP, TN, FN, FP since the false positives and false negatives are effectively zero. However, for the second and third classes, the precision and recall are opposite, as the number of false positives (14) for class 1 (which lowers the precision) corresponds to the number of false negatives for class 2 (which lowers the recall). As well as, the number of false negatives for class 1 (2) corresponds to the number of true positive for class 2. Therefore, the values of precision and recall will be similar, but opposite for these two classes (lowering their f1 score). Overall, the number of false positives and negatives (16) is relatively low in comparison to the entire 150 total instances, making the accuracy relatively high (0.9) as expected.
+The results we got above are proficient and expected, but have minor issues. As we clustered upon the three different possible classes, the "elbow" formed around k = 3 clusters; this is the appropriate and expected number of clusters to work best roughly (since there are 3 classes of flowers). The several metrics shown above showcase the ability for the clustering algorithm to group different images apart, but the weaknesses in grouping highly similar, but slightly different images. The classification report, in combination with our confusion matrix, show the different scores across the different classes. As the first class (zero) is different slightly in color and shape, the clustering algorithm clustered them all correctly (making the scores all 1s). However, it's clear that due to the close similarities between the virginica and versicolor plants, that the clustering algorithm had a much harder time clustering them as 16 plants between the two classes were not clustered correctly. While the overall accuracy of the clustering algorithm is high, it's likely to decrease as the number of "similar, but different" images increases. In the context of clustering images apart (for relevance), the K-Means clustering algorithm alone is not bad, but not good enough.
 
-However, these results are hard to reproduce, not because the clustering algorithm is incompetent, but due to the fact that clusters have no corresponding class to them. Therefore, the matching of "clusters" and classes is entirely random, and to reproduce these results takes a few reruns of the clustering algorithm. Not only does this affect the results of the Classification Report, but this affects the Confusion Matrix produced, as the mismatch of class appears as False Positives and Negatives. This makes sense, since some of these evaluation methods are better for classification algorithms as opposed to clustering. However, in the context of evaluating the clusters for their accuracy (since clustering is about grouping related items together), these methods are still viable.
+% the scores will all be ones, as the true positives and true negative will be equal to the total number of TP, TN, FN, FP since the false positives and false negatives are effectively zero. However, for the second and third classes, the precision and recall are opposite, as the number of false positives (14) for class 1 (which lowers the precision) corresponds to the number of false negatives for class 2 (which lowers the recall). As well as, the number of false negatives for class 1 (2) corresponds to the number of true positive for class 2. Therefore, the values of precision and recall will be similar, but opposite for these two classes (lowering their f1 score). Overall, the number of false positives and negatives (16) is relatively low in comparison to the entire 150 total instances, making the accuracy relatively high (0.9) as expected.
 
-To go further, the algorithm evaluated came from the sk-learn library as opposed to my own implementation, as it can cluster data points of higher dimensions ($> 2$). Therefore, this doesn't evaluate the validity of my original implementations entirely (even if they're modeled after sklearn's algorithm). Even if it evaluates my implementation, this doesn't evaluate the strength of the clustering algorithm entirely. While this shows that K-Means is proficient for clustering images of similarity, it doesn't show any comparisons to other clustering algorithms such as FCM or DBSCAN for example. As well as, it doesn't show comparisons of the algorithm performed on 
+Not to mention, it doesn't show any comparisons to other clustering algorithms such as FCM or DBSCAN for example. The evaluations, while justified classification methods, all came from sk-learn library, and there is little diversity of evaluation overall. For the ease-of-use, these methods were utilized as they were already apart of the sklearn library (along with the dataset and algorithm), however other clustering evaluation methods (such as those deeper than David-Boulden's score) and even other classification methods could be utilized to test and evaluate the K-Means algorithm further.
+
+% The algorithm evaluated came from the sk-learn library as opposed to my own implementation, as it can cluster data points of higher dimensions ($> 2$). Therefore, this doesn't evaluate the validity of my original implementations entirely (even if they're modeled similar to sklearn's algorithm). 
+
+As a side note, these results are hard to reproduce, not because the clustering algorithm is incompetent, but due to the fact that clusters have no corresponding class to them. Therefore, the matching of "clusters" and classes is entirely random, and to reproduce these results takes a few reruns of the clustering algorithm and evaluation functions. Not only does this affect the results of the Classification Report, but this affects the Confusion Matrix produced, as the mismatch of class appears as False Positives and Negatives. While there is a clear reproducibility issue in this code, the methods are still viable given the reasoning behind it; to reiterate, evaluating the clusters based on their accuracy (even via comparing classes) works as grouping images of similar visual context should group images of the same class together.
+
 
 
 % To go further, while the classification report calculates the individual scores of precision, recall, and f1-score for classes, there is no overall score for all of them together. 
